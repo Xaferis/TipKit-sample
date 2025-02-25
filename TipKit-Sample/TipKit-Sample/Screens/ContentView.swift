@@ -23,6 +23,18 @@ struct ContentView: View {
                 } label: {
                     Text("Simple Classic tip")
                 }
+                
+                NavigationLink {
+                    ActionPopoverTipView()
+                } label: {
+                    Text("Action Popover tip")
+                }
+                
+                NavigationLink {
+                    ActionClassicTipView()
+                } label: {
+                    Text("Action Classic tip")
+                }
             }
             .navigationTitle("TipKit Sample")
         }
