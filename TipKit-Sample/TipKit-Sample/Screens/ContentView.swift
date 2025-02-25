@@ -15,14 +15,14 @@ struct ContentView: View {
                 NavigationLink {
                     SimplePopoverTipView()
                 } label: {
-                    Text("Simple Popover")
+                    Text("Simple Popover tip")
                 }
 
-//                NavigationLink {
-//                    ABlursView()
-//                } label: {
-//                    Text("Blur a priehľadnosť")
-//                }
+                NavigationLink {
+                    SimpleClassicTipView()
+                } label: {
+                    Text("Simple Classic tip")
+                }
             }
             .navigationTitle("TipKit Sample")
         }

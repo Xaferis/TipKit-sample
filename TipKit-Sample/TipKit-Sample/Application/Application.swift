@@ -12,7 +12,11 @@ import TipKit
 struct Application: App {
     
     init() {
-        try? Tips.configure()
+        do {
+            try Tips.configure()
+        } catch {
+            print("Error initializing TipKit \(error.localizedDescription)")
+        }
     }
     
     var body: some Scene {

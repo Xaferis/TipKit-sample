@@ -1,5 +1,5 @@
 //
-//  SimplePopoverTipView.swift
+//  SimpleClassicTipView.swift
 //  TipKit-Sample
 //
 //  Created by Matúš Mištrik on 25/02/2025.
@@ -8,7 +8,7 @@
 import SwiftUI
 import TipKit
 
-struct SimplePopoverTipView: View {
+struct SimpleClassicTipView: View {
     
     var tip = SimpleTip()
 
@@ -19,6 +19,9 @@ struct SimplePopoverTipView: View {
                 .scaledToFit()
                 .frame(height: 200)
                 .padding()
+            
+            // TipView
+            TipView(tip)
             
             Text("Bezdrôtové slúchadlá")
                 .font(.title)
@@ -59,12 +62,11 @@ struct SimplePopoverTipView: View {
                     .frame(height: 24)
                     .padding()
             }
-            .popoverTip(tip)
         }
     }
 
 }
 
 #Preview {
-    SimplePopoverTipView()
+    SimpleClassicTipView()
 }
