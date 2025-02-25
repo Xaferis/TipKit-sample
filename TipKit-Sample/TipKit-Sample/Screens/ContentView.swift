@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import TipKit
 
 struct ContentView: View {
+    
+    @AppStorage("shouldClearTipKitDatastore") private var shouldClearTipKitDatastore: Bool = false
 
     var body: some View {
         NavigationStack {
@@ -35,8 +38,30 @@ struct ContentView: View {
                 } label: {
                     Text("Action Classic tip")
                 }
+                
+                NavigationLink {
+                    OptionPopoverTipView()
+                } label: {
+                    Text("Option Popover tip")
+                }
             }
             .navigationTitle("TipKit Sample")
+            .safeAreaInset(edge: .bottom) {
+                Button(action: {
+                    shouldClearTipKitDatastore = true
+                    
+                    exit(0)
+                }) {
+                    Text("Vymazať TipKit cache")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.red)
+                        .cornerRadius(10)
+                        .padding(.horizontal)
+                }
+            }
         }
 
     }
