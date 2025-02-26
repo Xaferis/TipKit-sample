@@ -70,6 +70,13 @@ struct ContentView: View {
                 } label: {
                     Text("Event Model Rule trigger view")
                 }
+                
+                NavigationLink {
+                    GroupedTipView()
+                } label: {
+                    Text("Grouped Tip view")
+                }
+
             }
             .navigationTitle("TipKit Sample")
             .safeAreaInset(edge: .bottom) {
