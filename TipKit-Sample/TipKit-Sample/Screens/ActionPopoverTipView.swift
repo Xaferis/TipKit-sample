@@ -10,6 +10,8 @@ import TipKit
 
 struct ActionPopoverTipView: View {
     
+    static let name = "ActionPopoverTipView"
+    
     var tip = ActionTip()
 
     var body: some View {

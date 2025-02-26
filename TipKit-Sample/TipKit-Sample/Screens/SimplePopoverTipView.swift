@@ -10,6 +10,8 @@ import TipKit
 
 struct SimplePopoverTipView: View {
     
+    static let name = "SimplePopoverTipView"
+    
     var tip = SimpleTip()
 
     var body: some View {
@@ -60,6 +62,9 @@ struct SimplePopoverTipView: View {
                     .padding()
             }
             .popoverTip(tip)
+        }
+        .task {
+            await EventModelRuleTip.didViewScreen.donate(.init(name: Self.name))
         }
     }
 

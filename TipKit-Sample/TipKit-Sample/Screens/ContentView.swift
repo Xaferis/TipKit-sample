@@ -11,6 +11,8 @@ import TipKit
 struct ContentView: View {
     
     @AppStorage("shouldClearTipKitDatastore") private var shouldClearTipKitDatastore: Bool = false
+    
+    var tip = EventModelRuleTip()
 
     var body: some View {
         NavigationStack {
@@ -62,6 +64,12 @@ struct ContentView: View {
                 } label: {
                     Text("Combined Rule Classic tip")
                 }
+                
+                NavigationLink {
+                    EventModelTipTriggerView()
+                } label: {
+                    Text("Event Model Rule trigger view")
+                }
             }
             .navigationTitle("TipKit Sample")
             .safeAreaInset(edge: .bottom) {
@@ -79,6 +87,7 @@ struct ContentView: View {
                         .cornerRadius(10)
                         .padding(.horizontal)
                 }
+                .popoverTip(tip)
             }
         }
 

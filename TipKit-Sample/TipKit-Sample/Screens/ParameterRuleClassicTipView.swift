@@ -10,6 +10,8 @@ import TipKit
 
 struct ParameterRuleClassicTipView: View {
     
+    static let name = "ParameterRuleClassicTipView"
+    
     @State private var isFavourite = false
     
     var tip = ParameterRuleTip()

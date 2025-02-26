@@ -10,6 +10,8 @@ import TipKit
 
 struct ActionClassicTipView: View {
     
+    static let name = "ActionClassicTipView"
+    
     var tip = ActionTip()
 
     var body: some View {

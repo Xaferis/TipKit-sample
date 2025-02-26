@@ -10,6 +10,8 @@ import TipKit
 
 struct CombinedRuleClassicTipView: View {
     
+    static let name = "CombinedRuleClassicTipView"
+    
     @State private var isFavourite = false
     
     var tip = CombinedRuleTip()

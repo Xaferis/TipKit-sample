@@ -10,6 +10,8 @@ import TipKit
 
 struct EventRulePopoverTipView: View {
     
+    static let name = "EventRulePopoverTipView"
+    
     @State private var isFavourite = false
     
     var tip = EventRuleTip()

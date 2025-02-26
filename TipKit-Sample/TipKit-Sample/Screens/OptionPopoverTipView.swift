@@ -10,6 +10,8 @@ import TipKit
 
 struct OptionPopoverTipView: View {
     
+    static let name = "OptionPopoverTipView"
+    
     var tip = OptionTip()
 
     var body: some View {
