@@ -77,6 +77,11 @@ struct ContentView: View {
                     Text("Grouped Tip view")
                 }
 
+                NavigationLink {
+                    CustomStyleTipView()
+                } label: {
+                    Text("Custom Tip view style")
+                }
             }
             .navigationTitle("TipKit Sample")
             .safeAreaInset(edge: .bottom) {
