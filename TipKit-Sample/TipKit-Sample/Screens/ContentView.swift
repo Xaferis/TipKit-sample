@@ -56,6 +56,12 @@ struct ContentView: View {
                 } label: {
                     Text("Event Rule Popover tip")
                 }
+                
+                NavigationLink {
+                    CombinedRuleClassicTipView()
+                } label: {
+                    Text("Combined Rule Classic tip")
+                }
             }
             .navigationTitle("TipKit Sample")
             .safeAreaInset(edge: .bottom) {
