@@ -50,6 +50,12 @@ struct ContentView: View {
                 } label: {
                     Text("Parameter Rule Classic tip")
                 }
+                
+                NavigationLink {
+                    EventRulePopoverTipView()
+                } label: {
+                    Text("Event Rule Popover tip")
+                }
             }
             .navigationTitle("TipKit Sample")
             .safeAreaInset(edge: .bottom) {
@@ -65,6 +71,7 @@ struct ContentView: View {
                         .frame(maxWidth: .infinity)
                         .background(Color.red)
                         .cornerRadius(10)
+                        .padding(.horizontal)
                 }
             }
         }
